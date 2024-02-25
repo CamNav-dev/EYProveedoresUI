@@ -1,33 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif; /* Asegúrate de que la familia de fuentes se aplique correctamente */
 }
 
+/* Utilidades y componentes personalizados */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .btn_white { 
+    @apply border-white bg-white px-8 py-3 text-green-500; 
   }
+  .btn_white_text { 
+    @apply border-white bg-white px-8 py-3 text-gray-900;
+  }
+  .btn_yellow  { 
+    @apply bg-yellow-400 px-8 py-5 text-white;
+  }
+  .btn_yellow { 
+    @apply bg-yellow-400 px-8 py-4 text-white transition-all hover:bg-black; 
+  }
+  .btn_dark_green_outline  { 
+    @apply border-green-700 bg-transparent px-8 py-5 text-green-700; 
+  }
+  
+  /* Contenedores y flexibilidad */
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  /* Definiciones de fuentes y tipografías */
+  /* Aquí continúan tus clases personalizadas como .regular-64, .bold-88, etc. */
+
+  /* Hero, Camp, Feature, Get App */
+  /* Asegúrate de ajustar cualquier otro elemento personalizado aquí */
+}
+
+/* Escondiendo la barra de desplazamiento en todos los navegadores */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
