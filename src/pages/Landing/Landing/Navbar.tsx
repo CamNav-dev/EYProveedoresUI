@@ -1,11 +1,10 @@
-import { NAV_LINKS } from "@/app/constants"
+import { NAV_LINKS } from "@/pages/Landing/constants"
 import Image from "next/image"
 import Link from "next/link"
-import Button from "@/app/components/Buttons/button"
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav className="flexBetween max-container padding-container relative z-30 py-5 mx-4">
       <Link href="/">
         <Image src="/logo.png" alt="logo" width={150} height={100} />
       </Link>
@@ -17,14 +16,6 @@ const Navbar = () => {
           </Link>
         ))}
       </ul>
-
-      <div className="lg:flexCenter hidden">
-        <Button 
-          label="Registrarse" 
-          variant="btn_yellow"
-          icon="/user.svg"
-        />
-      </div>
 
       <Image 
         src="menu.svg"

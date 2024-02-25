@@ -1,15 +1,14 @@
-'use client';
 
-
-import Features from "@/app/components/Landing/Features";
-import Hero from "@/app/components/Landing/Hero";
+import Features from "@/pages/Landing/Landing/Features";
+import Hero from "@/pages/Landing/Landing/Hero";
+import Navbar from "@/pages/Landing/Landing/Navbar";
 
 export default function Home() {
   return (
     <>
+      <Navbar/>
       <Hero />
       <Features />
-
     </>
   )
 }

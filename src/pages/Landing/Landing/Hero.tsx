@@ -1,11 +1,20 @@
+'use client';
 import Image from 'next/image';
-import Button from '@/app/components/Buttons/button';
+import Button from '@/pages/Landing/Buttons/button';
+import { useRouter } from 'next/router'
 
 const Hero = () => {
+  const router = useRouter();
+  const handleSignUp = () => {
+    router.push('/signup');
+  };
+
+  const handleLogin = () => {
+    router.push('/login');};
   return (
     <section className="max-container padding-container flex flex-col lg:flex-row gap-20 py-10 pb-32 md:gap-28 lg:py-20max-container flex flex-col lg:flex-row gap-20 py-10 pb-32 md:gap-28 lg:py-20 px-4 lg:px-8">
       {/* Columna para texto y botones */}
-      <div className="flex-1 flex flex-col justify-start">
+      <div className="flex-1 flex flex-col justify-start mx-20">
         <h1 className="bold-52 lg:bold-88">EasyConnect</h1>
         <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis consequuntur dolore, nam sed provident ex voluptatibus accusantium voluptas voluptatem minus laudantium error similique neque asperiores quia illum, placeat, fuga aliquid!
@@ -35,23 +44,22 @@ const Hero = () => {
           <Button
             label="Registrarse"
             variant="btn_yellow"
+            onClick={handleSignUp}
           />
           <Button
-            label="How we work?"
-            icon="/play.svg"
+            label="Iniciar sesion"
             variant="btn_yellow"
+            onClick={handleLogin}
           />
         </div>
       </div>
-
-      {/* Columna para la imagen */}
       <div className="flex-1 flex justify-center items-center">
         <Image
-          src="/supplier2.png" // Asegúrate de ajustar la ruta de tu imagen
+          src="/supplier2.png" 
           alt="Descripción de la imagen"
-          width={500} // Ajusta según tu necesidad
-          height={500} // Ajusta según tu necesidad
-          objectFit="contain" // Ajusta según prefieras
+          width={500} 
+          height={500} 
+          objectFit="contain" 
         />
       </div>
     </section>

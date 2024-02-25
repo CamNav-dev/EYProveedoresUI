@@ -4,7 +4,7 @@ type ButtonProps = {
   label: string;
   href?: string;
   variant: string;
-  icon?: string; // Nuevo prop para el ícono
+  icon?: string; 
   onClick?: () => void;
 };
 

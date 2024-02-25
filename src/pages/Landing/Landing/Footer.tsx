@@ -1,4 +1,4 @@
-import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/app/constants'
+import { FOOTER_CONTACT_INFO, FOOTER_LINKS, SOCIALS } from '@/pages/Landing/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'

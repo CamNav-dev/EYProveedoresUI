@@ -1,4 +1,4 @@
-import { FEATURES } from '@/app/constants'
+import { FEATURES } from '@/pages/Landing/constants'
 import Image from 'next/image'
 import React from 'react'
 
@@ -10,8 +10,8 @@ const Features = () => {
           <Image
             src="/supplier.jpg"
             alt="phone"
-            width={430} // Este valor se puede ajustar para controlar el tamaño de la imagen.
-            height={250} // Este valor se puede ajustar para controlar el tamaño de la imagen.
+            width={480} 
+            height={150}
             className="feature-phone"
           />
         </div>
